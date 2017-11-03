@@ -17,8 +17,8 @@ render();
 $('#button').click(function(){
   var val = $('select').val();
   var escaped_val = encodeURI(val);
-  
-  var tw = 'https://twitter.com/search?f=tweets&vertical=default&q=' + escaped_val + '&src=typd'
-  console.log(escaped_val);
+  var twlink = 'https://twitter.com/search?f=tweets&vertical=default&q=' + escaped_val + '&src=typd';
+  $('#target').attr('href', twlink);
+  $('#target')[0].click();
 })
 
